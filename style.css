@@ -1,0 +1,236 @@
+/* Colour Palette
+White: #FFFFFF
+Beige: #C5BCAB
+Ivory: #EBEBE0
+Blue: #63B4C9
+Brown: #4C3639
+*/
+
+/* Structure */
+
+body {
+  margin:0;
+  background-color: #EBEBE0;
+}
+
+header {
+  width:100%;
+  text-align: center;
+}
+
+main {
+  width:70%;
+  margin:30px auto;
+  background-color: #C5BCAB;
+  padding:30px;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+}
+
+section {
+  background-color: #f1f1f1;
+  width: 50%;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+ .article{
+   text-align: center;
+ }
+
+.featureimg {
+  width: 100%;
+}
+
+/* Video */
+video {
+  width: 100%;
+  height: auto;
+}
+
+/* :: Flex Display*/
+@media screen and (max-width: 1200px){
+  main {
+    width:70%;
+    margin:10px auto;
+    background-color: white;
+    padding:10px;
+  }
+
+  section{
+    width: 90%;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid black;
+  }
+}
+
+@media screen and (max-width: 800px){
+  main {
+    width:70%;
+    margin:30px auto;
+    background-color: #EBEBE0;
+  }
+  main{
+    flex-direction: column;
+  }
+
+  section{
+    width: 90%;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid black;
+  }
+}
+
+/*Form */
+.para{
+  text-align: left;
+}
+
+.favstore {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.altlabel {
+  display: block;
+  text-align: left;
+}
+
+input{
+  margin: 10px 0;
+  padding: 10px;
+}
+
+input[type=text]{
+  width:70%;
+  transition : width 0.4s ease-in-out;
+  border: none;
+  border-bottom: 2px solid grey;
+}
+
+input[type=text]:focus{
+  width: 70%;
+}
+
+textarea{
+  box-sizing: border-box;
+  width:100%;
+  margin: 10px;
+  resize: none;
+}
+
+
+/* Typography */
+
+@font-face {
+    font-family: SEGOEUI;
+    src:
+        url("../fonts/SEGOEUI.ttf");
+        url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/light/latest.woff2) format("woff2"),
+        url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/light/latest.woff) format("woff"),
+        url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/light/latest.ttf) format("truetype");
+    font-weight: thin;
+    font-style: normal;
+}
+
+body {
+  font-family: SEGOEUI, arial, sans-serif;
+}
+
+footer {
+  font-size: smaller;
+  text-align: center;
+}
+
+/* Navigation */
+
+nav {
+  width:100%;
+  padding:10px;
+  text-align: center;
+  background-color: #63B4C9;
+}
+
+
+ul {
+  padding:0;
+}
+
+li {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  padding: 10px 20px;
+  font-variant: small-caps;
+}
+
+a:link{
+  color:#FFFFFF;
+}
+
+a:visited{
+    color:#EBEBE0;
+}
+
+a:hover{
+    color:#4C3639;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+}
+
+a:active{
+  color:#4C3639;
+  font-weight:bold;
+}
+
+ /*zoom */
+ 
+.zoom img {
+  width:100%;
+}
+figure {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    overflow: hidden;
+}
+figure:hover+span {
+    bottom: -36px;
+    opacity: 1;
+}
+.zoom figure img {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+.zoom:hover figure img {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+}
+
+/*greyscale*/
+.greyscale {
+  width:400px;
+  margin:20px;
+}
+.greyscale figure img {
+  width:100%;
+}
+.greyscale figure img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+.greyscale figure:hover img {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+}
